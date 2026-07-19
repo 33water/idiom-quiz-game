@@ -4,7 +4,7 @@
   "description": "脑洞大翻车 — 成语猜谜游戏",
   "scripts": {
     "dev": "cross-env UNI_INPUT_DIR=. uni",
-    "build": "cross-env UNI_INPUT_DIR=. uni build"
+    "build": "cross-env UNI_INPUT_DIR=. uni build && node scripts/fix-paths.js"
   },
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-5010420260626001",

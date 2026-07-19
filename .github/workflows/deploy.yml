@@ -29,9 +29,6 @@ jobs:
       - run: npm install --legacy-peer-deps
       - run: npm run build
 
-      - name: Fix asset paths for subdirectory deployment
-        run: node scripts/fix-paths.js
-
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
         with:
