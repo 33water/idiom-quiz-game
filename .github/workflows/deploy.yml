@@ -27,9 +27,15 @@ jobs:
           node-version: 20
 
       - run: npm install --legacy-peer-deps
+
       - run: npm run build
-      - run: node scripts/fix-paths.js
-        shell: cmd
+
+      - name: Fix asset paths
+        run: |
+          $html = Get-Content dist\build\index.html -Raw
+          $html = $html -replace '(href|src)="/assets/', '$1"/idiom-quiz-game/assets/'
+          Set-Content dist\build\index.html -Value $html
+          Write-Host "Paths fixed"
 
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
