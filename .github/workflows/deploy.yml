@@ -30,12 +30,17 @@ jobs:
 
       - run: npm run build
 
-      - name: Fix asset paths
-        run: node -e "var fs=require('fs'),p='dist/build/index.html';fs.writeFileSync(p,fs.readFileSync(p,'utf8').replace(/(href|src)="\/assets\//g,function(m,a){return a+'=\"/idiom-quiz-game/assets/'}))"
+      - name: Debug build output
+        run: |
+          echo "--- node version ---"
+          node --version
+          echo "--- checking dist/build ---"
+          if (Test-Path dist/build/index.html) {
+            Write-Host "index.html FOUND"
+            Get-Content dist/build/index.html -TotalCount 3
+          } else {
+            Write-Host "index.html NOT FOUND"
+            echo "--- looking for index.html ---"
+            Get-ChildItem -Recurse -Filter index.html | Select-Object FullName
+          }
 
-      - uses: actions/configure-pages@v4
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: dist/build
-      - id: deployment
-        uses: actions/deploy-pages@v4
