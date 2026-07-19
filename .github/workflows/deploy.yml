@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -31,8 +31,9 @@ jobs:
       - run: npm run build
 
       - name: Fix asset paths for subdirectory deployment
+        shell: powershell
         run: |
-          sed -i 's|="/assets/|="/idiom-quiz-game/assets/|g' dist/build/index.html
+          (Get-Content dist/build/index.html) -replace '/assets/', '/idiom-quiz-game/assets/' | Set-Content dist/build/index.html
 
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
