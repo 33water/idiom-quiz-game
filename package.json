@@ -6,7 +6,6 @@
     "dev": "cross-env UNI_INPUT_DIR=. uni",
     "build": "cross-env UNI_INPUT_DIR=. uni build"
   },
-  "_comment": "cross-env makes UNI_INPUT_DIR work on both Windows and Linux",
   "dependencies": {
     "@dcloudio/uni-app": "3.0.0-alpha-5010420260626001",
     "vue": "^3.4.0"
