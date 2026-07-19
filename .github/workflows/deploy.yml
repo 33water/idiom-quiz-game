@@ -30,9 +30,7 @@ jobs:
       - run: npm run build
 
       - name: Fix asset paths for subdirectory deployment
-        shell: powershell
-        run: |
-          (Get-Content dist/build/index.html -Raw) -replace '(href|src)="/assets/', '$1="/idiom-quiz-game/assets/' | Set-Content dist/build/index.html
+        run: node scripts/fix-paths.js
 
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v3
