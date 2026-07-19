@@ -1,0 +1,108 @@
+// ========================================
+// 脑洞大翻车 — 全局样式变量
+// 设计系统参考: rules/DESIGN.md
+// ========================================
+
+// 色彩主调
+$theme-primary: #FF6B35;
+$theme-primary-light: #FF9F6E;
+$theme-primary-dark: #E55A2B;
+$theme-accent: #4ECDC4;
+$theme-accent-light: #7EDDD6;
+$theme-accent-dark: #3BBDB5;
+
+// 中性色
+$theme-bg: #f5f5f7;
+$theme-card: #ffffff;
+$theme-text: #1d1d1f;
+$theme-text-secondary: #3a3a3c;
+$theme-text-tertiary: #86868b;
+$theme-text-placeholder: #c7c7cc;
+$theme-border: #e5e5e7;
+
+// 语义色
+$theme-success: #34C759;
+$theme-error: #FF3B30;
+$theme-warning: #FF9500;
+
+// 圆角
+$radius-sm: 6rpx;
+$radius-md: 10rpx;
+$radius-lg: 14rpx;
+$radius-xl: 20rpx;
+
+// 间距
+$spacing-xs: 8rpx;
+$spacing-sm: 12rpx;
+$spacing-md: 16rpx;
+$spacing-lg: 24rpx;
+$spacing-xl: 32rpx;
+$spacing-xxl: 48rpx;
+
+// 字体
+$font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+$font-title: 36rpx;
+$font-body: 28rpx;
+$font-caption: 24rpx;
+$font-small: 22rpx;
+
+// 阴影
+$shadow-card: 0 1rpx 3rpx rgba(0,0,0,0.06);
+$shadow-popup: 0 -2rpx 10rpx rgba(0,0,0,0.08);
+
+// CSS 自定义属性（可在组件中通过 var() 引用）
+:root {
+  // 主色系
+  --theme-primary: #{$theme-primary};
+  --theme-primary-light: #{$theme-primary-light};
+  --theme-primary-dark: #{$theme-primary-dark};
+  --theme-accent: #{$theme-accent};
+  --theme-accent-light: #{$theme-accent-light};
+
+  // 中性色
+  --theme-bg: #{$theme-bg};
+  --theme-card: #{$theme-card};
+  --theme-text: #{$theme-text};
+  --theme-text-secondary: #{$theme-text-secondary};
+  --theme-text-tertiary: #{$theme-text-tertiary};
+  --theme-text-placeholder: #{$theme-text-placeholder};
+  --theme-border: #{$theme-border};
+
+  // 语义色
+  --theme-success: #{$theme-success};
+  --theme-error: #{$theme-error};
+  --theme-warning: #{$theme-warning};
+
+  // 圆角
+  --radius-sm: #{$radius-sm};
+  --radius-md: #{$radius-md};
+  --radius-lg: #{$radius-lg};
+  --radius-xl: #{$radius-xl};
+
+  // 间距
+  --spacing-xs: #{$spacing-xs};
+  --spacing-sm: #{$spacing-sm};
+  --spacing-md: #{$spacing-md};
+  --spacing-lg: #{$spacing-lg};
+  --spacing-xl: #{$spacing-xl};
+  --spacing-xxl: #{$spacing-xxl};
+
+  // 阴影
+  --shadow-card: #{$shadow-card};
+  --shadow-popup: #{$shadow-popup};
+}
+
+// ========================================
+// 深色模式
+// ========================================
+[data-theme="dark"] {
+  --theme-bg: #1c1c1e;
+  --theme-card: #2c2c2e;
+  --theme-text: #f5f5f7;
+  --theme-text-secondary: #d1d1d6;
+  --theme-text-tertiary: #8e8e93;
+  --theme-text-placeholder: #636366;
+  --theme-border: #38383a;
+  --shadow-card: 0 1rpx 3rpx rgba(0,0,0,0.3);
+  --shadow-popup: 0 -2rpx 10rpx rgba(0,0,0,0.4);
+}

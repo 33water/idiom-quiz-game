@@ -1,0 +1,14 @@
+{
+  "name": "脑洞大翻车",
+  "appid": "__UNI__NAODONG",
+  "version": "1.0.0",
+  "vueVersion": "3",
+  "description": "成语猜谜趣味应用",
+  "h5": {
+    "title": "脑洞大翻车",
+    "router": {
+      "mode": "hash",
+      "base": "/idiom-quiz-game/"
+    }
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "首页"
+      }
+    },
+    {
+      "path": "pages/game/game",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "猜谜"
+      }
+    },
+    {
+      "path": "pages/settle/settle",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "结算"
+      }
+    },
+    {
+      "path": "pages/encourage/encourage",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "鼓励"
+      }
+    },
+    {
+      "path": "pages/history/history",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "历史记录"
+      }
+    },
+    {
+      "path": "pages/error/error",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "错题本"
+      }
+    },
+    {
+      "path": "pages/collection/collection",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "收藏"
+      }
+    },
+    {
+      "path": "pages/dictionary/dictionary",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "成语词典"
+      }
+    },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "个人中心"
+      }
+    },
+    {
+      "path": "pages/statistics/statistics",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "学习统计"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "脑洞大翻车",
+    "backgroundColor": "#f5f5f7"
+  }
+}
